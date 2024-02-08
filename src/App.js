@@ -32,7 +32,7 @@
 import { Sidebar, Menu, MenuItem, Submenu } from "react-mui-sidebar";
 import { HiHome } from "react-icons/hi";
 import { GrServices } from "react-icons/gr";
-import { FaUser, FaLaptop, FaTshirt } from "react-icons/fa";
+import {  FaLaptop, FaTshirt } from "react-icons/fa";
 import {
   MdWeb,
   MdDesignServices,
