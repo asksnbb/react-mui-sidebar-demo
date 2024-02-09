@@ -1,34 +1,4 @@
-// import logo from './logo.svg';
-// import './App.css';
 
-// function App() {
-//   return (
-//        <div>
-//         adad
-//        </div>
-//     // <div className="App">
-//     //   <header className="App-header">
-//     //     <img src={logo} className="App-logo" alt="logo" />
-//     //     <p>
-//     //       Edit <code>src/App.js</code> and save to reload.
-//     //     </p>
-//     //     <a
-//     //       className="App-link"
-//     //       href="https://reactjs.org"
-//     //       target="_blank"
-//     //       rel="noopener noreferrer"
-//     //     >
-//     //       Learn React
-//     //     </a>
-//     //   </header>
-//     // </div>
-//   );
-// }
-
-// export default App;
-
-
-// import "./styles.css";
 import { Sidebar, Menu, MenuItem, Submenu } from "react-mui-sidebar";
 import { HiHome } from "react-icons/hi";
 import { GrServices } from "react-icons/gr";
@@ -48,7 +18,7 @@ import { RiContactsFill } from "react-icons/ri";
 
 export default function App() {
   return (
-    <Sidebar width={"300px"}>
+    <Sidebar width={"250px"}>
       <MenuItem link="/" icon={<HiHome />}>
         Home
       </MenuItem>
