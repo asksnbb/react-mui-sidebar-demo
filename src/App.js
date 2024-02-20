@@ -1,96 +1,31 @@
 
 import { Sidebar, Menu, MenuItem, Submenu } from "react-mui-sidebar";
-import { HiHome } from "react-icons/hi";
-import { GrServices } from "react-icons/gr";
-import {  FaLaptop, FaTshirt } from "react-icons/fa";
-import {
-  MdWeb,
-  MdDesignServices,
-  MdSmartphone,
-  MdArticle,
-} from "react-icons/md";
-import { SiGooglemarketingplatform } from "react-icons/si";
-import { FcElectronics } from "react-icons/fc";
-import { TiWatch } from "react-icons/ti";
-import { GiClothes, GiDress } from "react-icons/gi";
-import { BsSunglasses } from "react-icons/bs";
-import { RiContactsFill } from "react-icons/ri";
-
+import { IconAperture , IconShoppingCart,IconCalendar,IconMessageDots,IconCircle,IconDeviceDesktopAnalytics,IconUsers,IconEdit } from '@tabler/icons-react';
+import SidebarInfo from "./components/SidebarInfo";
 export default function App() {
   return (
-    <Sidebar width={"250px"}>
-      <MenuItem link="/" icon={<HiHome />}>
-        Home
-      </MenuItem>
-      {/* <MenuItem link="/about" icon={<FaUser />}>
-        About Us
-      </MenuItem> */}
-      <Submenu
-        icon={<GrServices />}
-        title="Services"
-        subBackgroundColor="#434E5F"
-      >
-        <MenuItem link="/services/web" icon={<MdWeb />}>
-          Web Development
-        </MenuItem>
-        <MenuItem
-          link="/services/digital-marketing"
-          icon={<SiGooglemarketingplatform />}
-        >
-          Digital Marketing
-        </MenuItem>
-        <MenuItem link="/services/graphic-design" icon={<MdDesignServices />}>
-          Graphic Design
-        </MenuItem>
-      </Submenu>
-
-      <Menu subHeading="Products">
-        <Submenu
-          icon={<FcElectronics />}
-          title="Electronics"
-          subBackgroundColor="#434E5F"
-        >
-          <MenuItem
-            link="/products/electronics/smartphones"
-            icon={<MdSmartphone />}
-          >
-            Smartphones
-          </MenuItem>
-          <MenuItem link="/products/electronics/laptops" icon={<FaLaptop />}>
-            Laptops
-          </MenuItem>
-          <MenuItem link="/products/electronics/wearables" icon={<TiWatch />}>
-            Wearables
-          </MenuItem>
-        </Submenu>
-        <Submenu
-          icon={<GiClothes />}
-          title="Apparel"
-          subBackgroundColor="#434E5F"
-        >
-          <MenuItem link="/products/apparel/mens" icon={<FaTshirt />}>
-            Men's Clothing
-          </MenuItem>
-          <MenuItem link="/products/apparel/women" icon={<GiDress />}>
-            Women's Clothing
-          </MenuItem>
-          <MenuItem
-            link="/products/apparel/accessories"
-            icon={<BsSunglasses />}
-          >
-            Accessories
-          </MenuItem>
-        </Submenu>
-      </Menu>
-
-      <Menu subHeading="Other">
-        <MenuItem link="/blog" icon={<MdArticle />}>
-          Blog
-        </MenuItem>
-        <MenuItem link="/contact" icon={<RiContactsFill />}>
-          Contact Us
-        </MenuItem>
-      </Menu>
-    </Sidebar>
+    <>
+        <Sidebar width={'270px'} collapsewidth="70px" collapsible={false}>
+            
+           <Menu subHeading="DASHBOARDS" >
+               <MenuItem link="/sdsa" badge="true" icon={<IconAperture size={21}/>}>Modern</MenuItem>
+               <MenuItem icon={<IconDeviceDesktopAnalytics size={21}/>}>Analytical</MenuItem>
+               <MenuItem icon={<IconShoppingCart size={21}/>}>eCommerce</MenuItem>
+           </Menu>
+           <Menu subHeading="APPLICATIONS">
+           <MenuItem icon={<IconMessageDots size={21}/>}>Chat</MenuItem>
+           <Submenu icon={<IconUsers  size={21}/>} subBackgroundColor="#434E5F" subTextColor="#5A6A85" title="Users">
+             <MenuItem icon={<IconCircle size={7}/>}>Dean</MenuItem>
+             <MenuItem icon={<IconCircle size={7}/>}>Marrie</MenuItem>
+             <MenuItem icon={<IconCircle size={7}/>}>John</MenuItem>
+             <MenuItem icon={<IconCircle size={7}/>}>Salma</MenuItem>
+             </Submenu>
+           <MenuItem icon={<IconEdit size={21}/>}>Note</MenuItem>
+           <MenuItem icon={<IconCalendar size={21}/>}>Calendar</MenuItem>
+           <MenuItem icon={<IconAperture size={21}/>} disabled="true">Disabled</MenuItem>
+           </Menu>
+        </Sidebar>
+         <SidebarInfo/>
+        </>
   );
 }
